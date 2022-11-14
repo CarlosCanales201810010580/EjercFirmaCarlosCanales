@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:forms="clr-namespace:SignaturePad.Forms;assembly=SignaturePad.Forms"
+             x:Class="EjercFirmaCarlosCanales.MainPage">
+
+
+    <StackLayout BackgroundColor="#2196F3">
+        <Frame BackgroundColor="#2196F3" Padding="10,0,20,20" CornerRadius="0">
+
+            <Label Text="....................." HorizontalTextAlignment="Center" TextColor="White" FontSize="20"/>
+        </Frame>
+        <Frame BackgroundColor="#2196F3" Padding="10,0,20,20" CornerRadius="0">
+            
+            <Label Text="Firma Digital " HorizontalTextAlignment="Center" TextColor="White" FontSize="20"/>
+        </Frame>
+        <forms:SignaturePadView  x:Name="pad" StrokeWidth="3" WidthRequest="300" HeightRequest="300" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"/>
+
+        <Entry Placeholder="Ingrese nombre"  x:Name="txtnombre"/>
+        <Entry Placeholder="Ingrese descripción" x:Name="txtdescripcion"/>
+
+        <Button Text="Guardar" x:Name="btnGuardar" Clicked="btnGuardar_Clicked" BackgroundColor="MediumBlue"/>
+        <Button Text="Lista de Firmas" x:Name="btnLista" Clicked="btnLista_Clicked" BackgroundColor="MediumBlue" />
+
+    </StackLayout>
+
+</ContentPage>
+
